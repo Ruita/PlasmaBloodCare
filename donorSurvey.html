@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
+  <title>Plasma Blood Care</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <style>
+body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      /*color: #818181;*/
+  }
+  
+  h2 {
+      font-size: 24px;
+      color: #303030;
+      font-weight: 600;
+      
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+   
+  }
+  
+  
+  .jumbotron {
+
+      
+      background-color:white;
+      color: #f4511e;
+
+      padding: 100px 25px;
+
+      font-family: Montserrat, sans-serif;
+      
+      
+
+  }
+
+  .navbar{
+
+      margin-bottom: 0;
+
+      background-color: #669933;
+
+      z-index: 9999;
+
+      border: 0;
+
+      font-size: 14px !important;
+
+      line-height: 1.42857143 !important;
+
+      letter-spacing: 4px;
+
+      border-radius: 0;
+
+      font-family: Montserrat, sans-serif;
+    
+      min-height:65px;
+   
+
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+
+      color: #fff !important;
+
+  }
+
+  .navbar a:hover {
+
+      color: #f4511e !important;
+
+    
+
+  }
+
+  .navbar-default .navbar-toggle {
+
+      border-color: transparent;
+
+      color: #fff !important;
+      
+
+  }
+  .navbar-header  
+   {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  
+
+  }
+.navbar-brand 
+{
+float:none;
+
+}
+.well
+ {
+    border: none;
+    margin-top: 160px;
+    margin-bottom: 100px;
+    margin-right: 15%;
+    margin-left: 15%;
+    background-color: #F0F0F0 ;
+}
+.btn-default
+{
+ background-color:#669933;
+ color:white;
+}
+
+.icon-bar {
+    
+    text-align: center;
+    
+    float: left;
+    margin-top:70px;
+    
+}
+
+.icon
+{
+ 	background-color: #fff !important;
+ 	padding: 20px 0;
+    color: #f4511e;
+    font-size: 25px;
+}
+
+.arrow
+{
+	color:#f4511e;
+    font-size: 25px;
+}
+.glyphicon-home
+{
+ 	font-size: 25px;
+ 	color:#f4511e;
+}
+</style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+
+  <div class="container">
+
+    <div class="navbar-header">
+
+      
+
+      <!--<a id="login" class="navbar-brand" href="#myPage">Login</a>-->
+      <a class="navbar-brand" href="index.php "><font size=6px>Plasma Blood Care</font></a>
+
+
+
+    </div>
+
+  </div>
+
+</nav>
+<!--Icon bar-->
+
+
+<div class="container">
+<div class="icon-bar">
+
+<a class="glyphicon glyphicon-home" style="text-decoration:none" href="index.php"></a>
+  <label class='arrow' style="color:black">&rarr;
+  </label>
+  <label class='icon'>Donor Survey</label>
+ 
+</div>
+<div class="container">
+  <div class="well well-lg">
+  <h2 style="text-align:center">Please Tell Us About Your Recent Blood Donation Experience</h2><br>
+ 
+    <form class="form-horizontal" role="form">
+    <ol>
+      
+      <div class="form-group" style="margin-left:10px">
+      
+        <li><label>I donated following blood products through the Plasma Blood Care:</li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+         		<label><input type="radio" name="optradio"/>Whole Blood</label>
+    	  </div>
+    	<div class="radio">
+      			<label><input type="radio" name="optradio"/>Double red cells</label>
+    	</div>
+    	<div class="radio">
+           <label><input type="radio" name="optradio">Platlets</label>
+        </div>
+        
+        </div>
+      </div>
+     
+
+       <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Did you have an appointment? </li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Yes</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>No</label>
+      </div>
+        
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>How long did you have to wait? </li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Less than 15 minutes</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>Less than 30 minutes</label>
+      </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>More</label>
+      </div>
+        
+        </div>
+      </div>
+      
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Is this your first time donating? </li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Yes</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>No</label>
+      </div>
+        
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>How often do you donate blood? </li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>1 time a year</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>2 times a year</label>
+      </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>More than 3 times</label>
+      </div>
+        
+        </div>
+      </div>
+       <div class="form-group " style="margin-left:10px">
+      
+        <li><label>How often do you donate double red cells? </li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>1 time a year</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>2 times a year</label>
+      </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>More than 3 times</label>
+      </div>
+        
+        </div>
+      </div>
+       <div class="form-group " style="margin-left:10px">
+      
+        <li><label>How many years have you been donating blood or platelets?</li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>0 to 5</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>  5 to 10</label>
+      </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>10 to 15</label>
+      </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio"/>15 or more</label>
+      </div>
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>The appointment times currently offered through the Plasma Blood Care meet my needs. :</li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Strongly agree</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>  Agree</label>
+      </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/> Disagree</label>
+      </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio"/>Strongly disagree</label>
+      </div>
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Gifts or incentive items motivate people to donate blood or platelets.:</li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Strongly agree</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>  Agree</label>
+      </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/> Disagree</label>
+      </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio"/>Strongly disagree</label>
+      </div>
+        </div>
+      </div>
+      
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>What incentive items motivate you to donate blood or platelets? Check all that apply.:</li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Discount coupons
+  
+</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>  Gift cards worth $10 or less</label>
+      </div>
+      <div class="radio">
+          <label><input type="radio" name="optradio"/> Gas cards worth $10 or less</label>
+      </div>
+        
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Please rate your overall opinion of the Plasma Blood Care.</li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Good
+ 
+ 
+
+  
+</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>  Fair</label>
+      </div>
+      <div class="radio">
+          <label><input type="radio" name="optradio"/> Poor</label>
+      </div>
+        
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Did the staff make you feel comfortable at registration? </li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Yes</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>No</label>
+      </div>
+        
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Did our screening staff speak in a clear and confidential manner?</li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Yes</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>No</label>
+      </div>
+        
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Did the staff make you feel comfortable at registration? </li></label>
+        
+        <div class="col-sm-5">
+        
+         <div class="radio">
+            <label><input type="radio" name="optradio"/>Yes</label>
+        </div>
+      <div class="radio">
+            <label><input type="radio" name="optradio"/>No</label>
+      </div>
+        
+        </div>
+      </div>
+      <div class="form-group " style="margin-left:10px">
+      
+        <li><label>Please provide any additional comments in the box below. </li></label>
+        
+        
+         <div class="col-sm-11">
+      <textarea class="form-control" rows="6" id="comment"></textarea>
+     </div>
+      </div>
+
+    
+       
+    
+    <div class="form-group">
+      <div class="col-sm-offset-4 col-sm-10">
+        <button type="submit" class="btn btn-default" style="padding: 10px 38px">Submit</button>
+        <a href="index.html" style="padding: 10px 19px; color:black"><font size="2">&#91;Cancel&#93;</font></a>
+      </div>
+    </div>
+    
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>

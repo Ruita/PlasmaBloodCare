@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/chalk.js"></script>
+<title>Plasma Blood Care</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<head>
+
+
+<style>
+#chartdiv {
+ width  : 100%;
+ height  : 435px;
+ font-size : 11px;
+}
+body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      /*color: #818181;*/
+  }
+  
+  h2 {
+      font-size: 24px;
+      color: #303030;
+      font-weight: 600;
+      
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+   
+  }
+  
+  
+  .jumbotron {
+
+      
+      background-color:white;
+      color: #f4511e;
+
+      padding: 100px 25px;
+
+      font-family: Montserrat, sans-serif;
+      
+      
+
+  }
+
+  .navbar{
+
+      margin-bottom: 0;
+
+      background-color: #669933;
+
+      z-index: 9999;
+
+      border: 0;
+
+      font-size: 14px !important;
+
+      line-height: 1.42857143 !important;
+
+      letter-spacing: 4px;
+
+      border-radius: 0;
+
+      font-family: Montserrat, sans-serif;
+    
+      min-height:65px;
+   
+
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+
+      color: #fff !important;
+
+  }
+
+  .navbar a:hover {
+
+      color: #f4511e !important;
+
+    
+
+  }
+
+  .navbar-default .navbar-toggle {
+
+      border-color: transparent;
+
+      color: #fff !important;
+      
+
+  }
+  .navbar-header  
+   {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  
+
+  }
+.navbar-brand 
+{
+float:none;
+
+}
+.well
+ {
+    border: none;
+    margin-top: 160px;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+    background-color: #F0F0F0 ;
+}
+.btn-default
+{
+ background-color:#669933;
+ color:white;
+}
+
+.icon-bar {
+    
+    text-align: center;
+    
+    float: left;
+    margin-top:70px;
+    margin-left:70px;
+    
+}
+
+.icon
+{
+ 	background-color: #fff !important;
+ 	padding: 10px 0;
+    color: #f4511e;
+    font-size: 25px;
+}
+
+.arrow
+{
+	color:#f4511e;
+    font-size: 25px;
+}
+.glyphicon-home
+{
+ 	font-size: 25px;
+ 	color:#f4511e;
+}
+</style>
+</head>          
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+
+  <div class="container">
+
+    <div class="navbar-header">
+
+      
+      <!--<a id="login" class="navbar-brand" href="#myPage">Login</a>-->
+      <a class="navbar-brand" href="index.php "><font size=6px>Plasma Blood Care</font></a>
+
+
+
+    </div>
+
+  </div>
+
+</nav>
+<div class="icon-bar">
+
+<a class="glyphicon glyphicon-home" style="text-decoration:none" href="index.php"></a>
+  <label class='arrow' style="color:black">&rarr;
+  </label>
+  <label class='icon'>Blood Donor Report By Location</label>
+ 
+</div>
+<div class="container">
+
+
+<div id="chartdiv"></div>
+<div class="container-fluid">
+  <div class="row text-center" style="overflow:hidden;">
+  <div class="col-sm-3" style="float: none !important;display: inline-block;">
+   <label class="text-left">Angle:</label>
+   <input class="chart-input" data-property="angle" type="range" min="0" max="89" value="30" step="1"/> 
+  </div>
+
+  <div class="col-sm-3" style="float: none !important;display: inline-block;">
+   <label class="text-left">Depth:</label>
+   <input class="chart-input" data-property="depth3D" type="range" min="1" max="120" value="20" step="1"/>
+  </div>
+ </div>
+</div>
+</div>                 
+<script>
+var chart = AmCharts.makeChart("chartdiv", {
+    "theme": "light",
+    "type": "serial",
+ "startDuration": 2,
+    "dataProvider": [{
+        "city": "San Francisco",
+        "donor": 402,
+        "color": "#990000"
+    }, {
+        "city": "San Jose",
+        "donor": 288,
+        "color": "#FF6600"
+    }, {
+        "city": "Oakland",
+        "donor": 200,
+        "color": "#FF9E01"
+    }, {
+        "city": "Palo Alto",
+        "donor": 132,
+        "color": "#FCD202"
+    }, {
+        "city": "Fremont",
+        "donor": 112,
+        "color": "#F8FF01"
+    }, {
+        "city": "Sunnyvale",
+        "donor": 111,
+        "color": "#4d9900"
+    }, {
+        "city": "San Ramon",
+        "donor": 98,
+        "color": "#04D215"
+    }, {
+        "city": "Santa Clara",
+        "donor": 71,
+        "color": "#0D8ECF"
+    }, {
+        "city": "Cupertino",
+        "donor": 66,
+        "color": "#0D52D1"
+    }, {
+        "city": "Daly City",
+        "donor": 58,
+        "color": "#2A0CD0"
+    }, {
+        "city": "Santa Cruz",
+        "donor": 44,
+        "color": "#8A0CCF"
+    }, {
+        "city": "Milpitas",
+        "donor": 44,
+        "color": "#CD0D74"
+    }, {
+        "city": "Concord",
+        "donor": 32,
+        "color": "#000000"
+    }],
+    "valueAxes": [{
+        "position": "left",
+        "title": "No. of Donor"
+    }],
+    "graphs": [{
+        "balloonText": "[[category]]: <b>[[value]]</b>",
+        "fillColorsField": "color",
+        "fillAlphas": 1,
+        "lineAlpha": 0.1,
+        "type": "column",
+        "valueField": "donor"
+    }],
+    "depth3D": 20,
+    "angle": 30,
+    "chartCursor": {
+        "categoryBalloonEnabled": false,
+        "cursorAlpha": 0,
+        "zoomable": false
+    },    
+    "categoryField": "city",
+    "categoryAxis": {
+        "gridPosition": "start",
+        "labelRotation": 90
+    },
+    "export": {
+     "enabled": true
+     }
+
+});
+jQuery('.chart-input').off().on('input change',function() {
+ var property = jQuery(this).data('property');
+ var target  = chart;
+ chart.startDuration = 0;
+
+ if ( property == 'topRadius') {
+  target = chart.graphs[0];
+       if ( this.value == 0 ) {
+          this.value = undefined;
+       }
+ }
+
+ target[property] = this.value;
+ chart.validateNow();
+});
+</script>
+</body>
+</html>
+

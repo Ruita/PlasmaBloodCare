@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/jquery-ui.css" type="text/css" />
+  <link rel="stylesheet" href="/resources/demos/style.css">
+ <link rel="stylesheet" href=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">
+  <script src="https://code.jquery.com/jquery-1.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .disabled span{
+    color:black !important;
+    background:red !important;    
+}
+.enabled a{
+    color:black !important;
+    background:green !important;    
+}
+div.ui-datepicker{
+ font-size:17px;
+}
+</style>
+  <script>
+
+ $(document).ready (function()
+ {
+  var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+var unavailableDates = ["2016/09/15","2016/09/25","2016/09/05","2016/09/29","2016/09/01","2016/09/21","2016/09/22","2016/08/15","2016/08/25","2016/08/05","2016/08/29","2016/08/01","2016/08/21","2016/08/22"]; // yyyy/MM/dd
+var unavailableDays = ["Saturday","Sunday"];
+
+function unavailable(date) {
+    ymd = date.getFullYear() + "/" + ("0"+(date.getMonth()+1)).slice(-2) + "/" + ("0"+date.getDate()).slice(-2);
+    day = new Date(ymd).getDay();
+    if ($.inArray(ymd, unavailableDates) < 0 && $.inArray(days[day], unavailableDays) < 0) {
+        return [true, "enabled", "Book Now"];
+    } else {
+        return [false,"disabled","Booked Out"];
+    }
+}
+
+$('#iDate').datepicker({ beforeShowDay: unavailable });
+});
+  </script>
+</head>
+<body>
+ 
+
+<div class="col-sm-3">
+ <input id="iDate"  class="form-control"/>
+ </div>
+ 
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<title>Sky Forms</title>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<style>
+		
+.centered-form{
+	margin-top: 130px;
+	
+}
+#register
+{
+background-color:#669933;
+border:none;
+}
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      /*color: #818181;*/
+      background-color: white;
+  }
+  
+  h2 {
+      font-size: 24px;
+      color: #303030;
+      font-weight: 600;
+      
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+   
+  }
+  
+  
+  .jumbotron {
+
+      
+      background-color:white;
+      color: #f4511e;
+
+      padding: 100px 25px;
+
+      font-family: Montserrat, sans-serif;
+      
+      
+
+  }
+
+  .navbar{
+
+      margin-bottom: 0;
+
+      background-color: #669933;
+
+      z-index: 9999;
+
+      border: 0;
+
+      font-size: 14px !important;
+
+      line-height: 1.42857143 !important;
+
+      letter-spacing: 4px;
+
+      border-radius: 0;
+
+      font-family: Montserrat, sans-serif;
+    
+      min-height:65px;
+   
+
+  }
+
+  .navbar li a, .navbar .navbar-brand {
+
+      color: #fff !important;
+
+  }
+
+  .navbar a:hover {
+
+      color: #f4511e !important;
+
+    
+
+  }
+
+  .navbar-default .navbar-toggle {
+
+      border-color: transparent;
+
+      color: #fff !important;
+      
+
+  }
+  .navbar-header  {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  
+
+}
+.navbar-brand 
+{
+float:none;
+
+}
+/*Sign up with facebook, twitter and gmail*/
+.btn {
+ background-color: #8E8E8E;
+ border: 0;
+ border-radius: 3px;
+ color: #FFF;
+ cursor: pointer;
+ box-shadow: 2px 2px 2px #111;
+  width: 100%;
+ height: 40px;
+ text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.btn span {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.btn:active {
+  top: 1px;
+  box-shadow: 1px 1px 2px #000;
+}
+
+.btn i {
+  margin-right: 10px;
+}
+
+.facebook {
+  background-color: #3B5998;
+}
+
+.facebook i {
+ margin-left: 25px;
+ float: left;
+ width: 44px;
+ height: 40px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAN1JREFUeNpi/P//P8NQAoyjDh518KiDRx086uBh62AtIOZE4r8A4qcUmwpyMJWxKxA//I8J2qlhPguVQ9UMiLcAMRutoo2Jyub10tKxtEjDb4FYCIn/C4jXA/FHIN4BZQ8qB38AYn4k/kQgLhjMSQIdfB/saXhIlMMGQDwHic2MJHcBiE8h8ZsoLYup4WAbID5MhLq/QMxLaTKhZ5K4SY00TU8HX6CKKVSulh/SojpGxkOulBh18KiDRx086uDRxg9eoIvW46BOx3O0mz/q4FEHjzp41MGjDiYXAAQYAJmVcB6iaE2HAAAAAElFTkSuQmCC") no-repeat center center;
+}
+
+.twitter {
+  background-color: #1CB5E8;
+}
+
+.twitter i {
+  float: left;
+  margin-left: 16px;
+  width: 44px;
+  height: 40px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAi5JREFUeNrs2M1LVFEYx3GvDoWvEKSMhhqBSrhQjCwXRuDKjbVoIYgQbVy0CXduWgT+BS5cSgUJvdmmVb4giIHRSpTEUjcGLnwtDUy7fQ88wnVQ5zlzzyyE88AHFY7n/uaZc+85M0EYhjnnqXJzzln5wD6wD+wD+8DWdRV9+IxFfMRDFETGFKFBNZvZ6ZTuotFivHELX/EvPF4HeIU6tGEEzzRzai9chHG5eJXyf2qwEJ5dO/JzCmWaebVLogQVaMJ7NKcZn4cnqE0zrhjbWECvyzUcSAhTN/ABj3HhlPGluK+c26zlLqy5XMMlGE15O826nEYnLiOIjK89Yd2eVht4oL0vEsou7OAN2lK63iLm8Akz+IFL+HvGOxCtbxjXPnISFuNe4yYeSdho1QtTm/gdWUKaynP9HE5iQH5fTzPWdLfSIsRP7Lru8B6uy1Pi0PHG8l3md9rhDby0ffs09zzms7U1v8A7x91dli07K4FNl3vQj1XpTtyalCWRtcOPWWtLcqG9mGHNo/K57QtPWF5kH/fQ4aC7I/LCLVe93enLqMaXMF4tWRyiMjqtnRR6EKv4Yxl2C+0ZXjfjwEeuYdgi7C664lxTOzA35e+kHLzfYl8Zdg3dMRukvunuoBX5svU2y66nrTE8xXTcO1Ub2Oz3F+WzWLnF/BMYkvPzLxc7TWD57WVSDvCm47dxBYXyPD+QUCvSSRN2Flsut8bAf93qA/vAPrAP7APb1H8BBgDZp0G+vm9PBgAAAABJRU5ErkJggg==") no-repeat center center;
+}
+
+.plus {
+  padding-left: 54px;
+  background-color: #4285F4;
+}
+
+.plus .i {
+  border-radius: 3px;
+  margin-left: 25px;
+ position: absolute;
+ border-top: 8px solid #D64335;
+ width: 44px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  
+  /*border-right: 1px solid #343434;*/
+  line-height: 26px;
+}
+
+.plus i:before {
+ content: "g";
+ font: 29px "Palatino Linotype", Georgia, serif;
+  text-shadow: 1px 1px 1px #444;
+  line-height: 0px;
+  margin-left: 10px;
+}
+
+.plus i:after {
+ content: "+";
+ border-left: 11px solid #426AAD;
+ background-color: #32A45E;
+ border-right: 11px solid #F8CA32;
+ width: 11px;
+ font: 18px "Palatino Linotype", Georgia, serif;
+  line-height: 38px;
+ position: absolute;
+ top: -8px;
+ left: 12px;
+  height: 8px;
+}
+
+#background
+{
+  position: relative;
+  z-index: 10;
+  text-align:center;
+
+}
+h5::before
+{
+  border-top: 2px solid #dfdfdf;
+  content:"";
+  margin: 0 auto;
+  position: absolute; 
+  top: 50%; left: 0; right: 1px; bottom: 0;
+  z-index: -10;
+  
+}
+
+h5 span
+{
+  background: #fff; 
+  padding: 0 10px; 
+}
+
+/* Icon bar*/
+.icon-bar {
+    
+    text-align: center;
+    
+    float: left;
+    margin-top:70px;
+    margin-left:30px;
+    
+    
+}
+
+.icon
+{
+ 	background-color: #fff !important;
+ 	padding: 20px 0;
+    color: #f4511e;
+    font-size: 25px;
+}
+
+.arrow
+{
+	color:#f4511e;
+    font-size: 25px;
+}
+.glyphicon-home
+{
+ 	font-size: 25px;
+ 	color:#f4511e;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+        <span class="icon-bar"></span>
+
+        <span class="icon-bar"></span>
+
+        <span class="icon-bar"></span>                        
+
+      </button>
+
+      <!--<a id="login" class="navbar-brand" href="#myPage">Login</a>-->
+      <a class="navbar-brand" href=" index.php"><font size=6px>Plasma Blood Care</a>
+
+
+
+    </div>
+
+  </div>
+
+</nav>
+<div class="icon-bar">
+  <a class="glyphicon glyphicon-home" style="text-decoration:none" href="index.php"></a>
+  <label class='arrow'>&rarr;
+  </label>
+  
+  <label class='icon'>Sign Up</label>
+</div>
+<div class="container">
+
+        <div class="row centered-form" >
+        
+        <!--<div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">-->
+        <div class="col-xs-6 col-sm-16 col-md-4 col-sm-offset-2 col-md-offset-1">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Sign up for Plasma Blood Care </h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name" required>
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name" required>
+			    					</div>
+			    				</div>
+			    				 
+			    			</div>
+							<div class="form-group">
+			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="User Name" required>
+			    			</div>
+
+			    			<div class="form-group">
+			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address" required>
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    				<div class="form-group">
+			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password" required>
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<input type="submit" value="Sign Up" id="register"class="btn btn-info btn-block center-block" style="text-align:center">
+			    		
+			    		</form>
+			    		
+			    	</div>
+			    	
+	    		
+	    		</div>
+	    		
+	    		 <h5 id="background" class="col-xs-12"><span><strong><font size="4px">Or</font></strong></span></h5>
+	    		<button class="btn facebook" data-provider="facebook"><i></i><span>Sign Up with Facebook</span></button>
+  				<button class="btn twitter" data-provider="twitter"><i></i><span>Sign Up with Twitter</span></button>
+  				<button class="btn plus" data-provider="gmail"><span class="i"><i></i></span><span>Sign Up with Google</span></button>
+    		</div>
+    		<img src="pbc6.jpg" height="475" width="390"alt="Smiley face"  align="right">
+    	</div>
+    	
+    </div>
+    
+    </body>
+</html>
